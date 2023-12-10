@@ -4,23 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Your Beautiful Website</title>
+    <title>Flores_FinalProject</title>
+    <style>
+        /* Add some basic styling for tabs */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #a5a1a1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: rgb(194, 187, 187);
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        /* Initially hide all sections except the first one */
+        section:not(:first-of-type) {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Your Beautiful Website</h1>
+        <h1>CPE232 Final Project</h1>
     </header>
-    <section>
-        <p>This is a simple, beautiful GitHub Pages website.</p>
+    <nav>
+        <a href="#" onclick="showTab('prelim')">Prelim</a>
+        <a href="#" onclick="showTab('midterm')">Midterm</a>
+        <a href="#" onclick="showTab('final')">Final</a>
+        <a href="#" onclick="showTab('about')">About</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>This is a paragraph</p>
     </section>
-    <section id="prelim-activities">
-        <h2>Prelim Activities (All HOA)</h2>
+    <section id="prelim">
+        <h2>Prelim Period Activities (All HOA)</h2>
         <a href="https://github.com/seafrax/Flores_HOA1" target="_blank">1.1 Hands-on Activity - Creating Virtual Machines</a>
         <br>
         <a href="https://github.com/seafrax/Flores_HOA2" target="_blank">2.1 Hands-on Activity - SSH Key-Based Authentication and GIT Setup</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA3" target="_blank">3.1 Hands-on Activity - Install SSH server on CentOS or RHEL 8</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA4" target="_blank">4.1 Hands-on Activity: Ansible Basics</a>
+        <br>
+        <a href="https://github.com/seafrax/HOA5" target="_blank">Hands-on Activity 5.1: Implement Ansible roles in playbooks</a>
+        <br>
+        <h2>Prelim Exam</h2>
+        <a href="https://github.com/seafrax/Flores_PrelimExam" target="_blank">Prelim Skills Exam</a>
     </section>
-    <footer>
-        <p>&copy; 2023 Your Name</p>
-    </footer>
+    <section id="midterm">
+        <h2>Midterm Period Activities (All HOA)</h2>
+        <a href="https://github.com/seafrax/Flores_HOA6" target="_blank">Hands-On Activity 6.1: Targeting Specific Nodes</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA7" target="_blank">Hands-on Activity 7.1: Managing Files and Creating Roles in Ansible</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA8" target="_blank">Hands-on Activity 8.1: Install, Configure, and Manage Enterprise Availability Monitoring via Ansible</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA9" target="_blank">Hands-on Activity 9.1: Install, Configure and Manage Enterprise Performance Monitoring via Ansible</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA10" target="_blank">Hands-on Activity 10.1: Install, Configure and Manage Enterprise Log Monitoring via Ansible</a>
+        <h2>Midterm Exam</h2>
+        <a href="https://github.com/seafrax/CPE_MIDEXAM_FLORES" target="_blank">Midterm Skills Exam</a>
+    </section>
+    <section id="final">
+        <h2>Final Period Activities (All HOA)</h2>
+        <a href="https://github.com/seafrax/Flores_HOA11" target="_blank">Hands-on Activity 11.1: Containerization</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA12" target="_blank">Hands-on Activity 12.1 Build a Sample Web App in a Docker Container</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA13" target="_blank">Hands-on Activity 13.1- OpenStack Prerequisite Installation</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA14" target="_blank">Hands-on Activity 14.1- OpenStack Installation (Keystone, Glance, Nova)</a>
+        <br>
+        <a href="https://github.com/seafrax/Flores_HOA15" target="_blank">Hands-on Activity 15.1 - OpenStack Installation (Neutron, Horizon, Cinder)</a>
+    </section>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(tabName).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
