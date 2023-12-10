@@ -7,23 +7,49 @@ body {
 
 header {
     background-color: #333;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 section {
     max-width: 800px;
     margin: 2em auto;
-    padding: 0 1em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+section h2 {
+    color: #333;
 }
+
+section a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+
